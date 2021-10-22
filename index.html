@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Guilherme Ribeiro - DoWhile 2021</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="avatar">
+        <span>
+          <img src="images/build.svg" alt="Selo Rocktseat" />
+        </span>
+        <img src="images/fotoPessoal.jpg" alt="Foto Pessoal" />
+      </div>
+      <div class="container">
+        <h1 id="userName">Guilherme Ribeiro</h1>
+        <a href="https://github.com//guilhermergcs" target="_blank">
+          <img src="images/github.svg" alt="Ícone Github" />guilhermergcs</a
+        >
+        <p>An instructor focused on helping pople start programming for web</p>
+
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="https://youtube.com" target="_blank">
+              <img src="images/youtube.svg" alt="Youtube" />
+            </a>
+          </li>
+          <li class="facebook">
+            <a href="https://facebook.com/guilhermersilva167" target="_blank">
+              <img src="images/facebook.svg" alt="Facebook" />
+            </a>
+          </li>
+          <li class="instagram">
+            <a href="https://instagram.com/guilhermergcs" target="_blank">
+              <img src="images/instagram.svg" alt="Instagram" />
+            </a>
+          </li>
+          <li class="twitter">
+            <a href="https://twitter.com/guirsilva" target="_blank">
+              <img src="images/twitter.svg" alt="Twitter" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <script>
+      const linksSocialMedia = {
+        github: 'guilhermergcs',
+        youtube: 'tvgob',
+        facebook: 'guilhermersilva167',
+        instagram: 'guilhermergcs',
+        twitter: 'guirsilva'
+      }
+
+      function changeSocialMediaLinks(){
+        for(let li of socialLinks.children){ // children é os filhos do id solcialLinks que é o id da ul
+          const social = li.getAttribute('class') //pegando os atributos da class
+          li.children[0].href = `https://${social}.com.br/${linksSocialMedia[social]}`
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
+  </body>
+</html>

@@ -19,14 +19,22 @@
         <span>
           <img src="images/build.svg" alt="Selo Rocktseat" />
         </span>
-        <img src="images/fotoPessoal.jpg" alt="Foto Pessoal" />
+        <img id="userImage" src="images/fotoPessoal.jpg" alt="Foto Pessoal" />
       </div>
       <div class="container">
         <h1 id="userName">Guilherme Ribeiro</h1>
-        <a href="https://github.com//guilhermergcs" target="_blank">
-          <img src="images/github.svg" alt="Ícone Github" />guilhermergcs</a
+        <a
+          id="userProfile"
+          href="https://github.com//guilhermergcs"
+          target="_blank"
         >
-        <p>An instructor focused on helping pople start programming for web</p>
+          <img src="images/github.svg" alt="Ícone Github" /><span id="userLogin"
+            >guilhermergcs</span
+          ></a
+        >
+        <p id="userBio">
+          An instructor focused on helping pople start programming for web
+        </p>
 
         <ul id="socialLinks">
           <li class="youtube">
@@ -52,23 +60,6 @@
         </ul>
       </div>
     </main>
-    <script>
-      const linksSocialMedia = {
-        github: 'guilhermergcs',
-        youtube: 'tvgob',
-        facebook: 'guilhermersilva167',
-        instagram: 'guilhermergcs',
-        twitter: 'guirsilva'
-      }
-
-      function changeSocialMediaLinks(){
-        for(let li of socialLinks.children){ // children é os filhos do id solcialLinks que é o id da ul
-          const social = li.getAttribute('class') //pegando os atributos da class
-          li.children[0].href = `https://${social}.com.br/${linksSocialMedia[social]}`
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
